@@ -8,8 +8,9 @@ const forecast=(latitude,longitude,callback)=>{
         }else if(response.body.error){
             callback('unable to find location!',undefined)
         }else{
+          
             callback(undefined,
-                'temperature is: '+response.body.currently.temperature+' chance of precipitaion is: '+response.body.currently. precipProbability
+                'temperature is: '+response.body.currently.temperature+' celcius out.Temp high today is:  '+response.body.daily.data[0].temperatureHigh+'celcius'+' with a low of:'+response.body.daily.data[0].temperatureLow+'Celcius '+' chance of precipitaion is: '+response.body.currently. precipProbability
 
             )
          }
